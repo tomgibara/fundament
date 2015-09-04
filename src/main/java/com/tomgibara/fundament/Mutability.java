@@ -24,7 +24,10 @@ public interface Mutability<T> {
 	 * 
 	 * @return the mutable object or a mutable copy
 	 */
-	T mutable();
+	@SuppressWarnings("unchecked")
+	default T mutable() {
+		return isMutable() ? (T) this : mutableCopy();
+	}
 	
 	/**
 	 * A mutable copy of the object. Changes to the state of the returned copy
@@ -41,7 +44,10 @@ public interface Mutability<T> {
 	 * 
 	 * @return the immutable object or an immutable copy.
 	 */
-	T immutable();
+	@SuppressWarnings("unchecked")
+	default T immutable() {
+		return isMutable() ? immutableCopy() : (T) this;
+	}
 	
 	/**
 	 * An immutable copy of this object.
