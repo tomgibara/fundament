@@ -4,7 +4,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 /**
- * A mapping that can is bijective, ie. both injective and surjective.
+ * A mapping that is bijective, ie. both injective and surjective.
  *
  * @author Tom Gibara
  *

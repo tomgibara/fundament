@@ -5,7 +5,7 @@ import java.util.function.UnaryOperator;
 
 /**
  * Enriches the java <code>Function</code> type with information about the
- * functions domain and range.
+ * function's domain and range.
  *
  * @author Tom Gibara
  *
@@ -81,7 +81,8 @@ public interface Mapping<T, R> extends Function<T, R> {
 
 	/**
 	 * Evaluates whether the supplied object is a valid parameter for the
-	 * {@link #apply(Object)} method.
+	 * {@link #apply(Object)} method. The default implementations returns true
+	 * exactly when the supplied object is an instance of the domain type.
 	 *
 	 * @param obj
 	 *            the value being tested, may be null
