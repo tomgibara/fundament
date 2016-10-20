@@ -150,13 +150,13 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 		if (before == null) throw new IllegalArgumentException("null before");
 		if (before.rangeType() != this.domainType()) throw new IllegalArgumentException("mismatched domain and range");
 		return new Bijection<S, R>() {
-			@Override public R apply(S s)    { return Bijection.this.apply(before.apply(s)); }
-			@Override public S disapply(R r) { return before.disapply(Bijection.this.disapply(r)); }
-			@Override public Bijection<R, S> inverse() { return before.inverse().compose(Bijection.this.inverse()); }
-			@Override public Class<S> domainType()  { return before.domainType(); }
-			@Override public Class<R> rangeType() { return Bijection.this.rangeType(); }
-			@Override public boolean isInDomain(Object obj) { return before.isInDomain(obj); }
-			@Override public boolean isInRange(Object obj)  { return Bijection.this.isInRange(obj); }
+			@Override public R apply(S s)                   { return Bijection.this.apply(before.apply(s));              }
+			@Override public S disapply(R r)                { return before.disapply(Bijection.this.disapply(r));        }
+			@Override public Bijection<R, S> inverse()      { return before.inverse().compose(Bijection.this.inverse()); }
+			@Override public Class<S> domainType()          { return before.domainType();                                }
+			@Override public Class<R> rangeType()           { return Bijection.this.rangeType();                         }
+			@Override public boolean isInDomain(Object obj) { return before.isInDomain(obj);                             }
+			@Override public boolean isInRange(Object obj)  { return Bijection.this.isInRange(obj);                      }
 		};
 	}
 
@@ -170,11 +170,11 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 
 	default Bijection<R, T> inverse() {
 		return new Bijection<R, T>() {
-			@Override public T apply(R t)    { return Bijection.this.disapply(t); }
-			@Override public R disapply(T t) { return Bijection.this.apply(t);    }
-			@Override public Bijection<T,R> inverse() { return Bijection.this; }
-			@Override public Class<R> domainType() { return Bijection.this.rangeType();  }
-			@Override public Class<T> rangeType()  { return Bijection.this.domainType(); }
+			@Override public T apply(R t)                   { return Bijection.this.disapply(t);     }
+			@Override public R disapply(T t)                { return Bijection.this.apply(t);        }
+			@Override public Bijection<T,R> inverse()       { return Bijection.this;                 }
+			@Override public Class<R> domainType()          { return Bijection.this.rangeType();     }
+			@Override public Class<T> rangeType()           { return Bijection.this.domainType();    }
 			@Override public boolean isInDomain(Object obj) { return Bijection.this.isInRange(obj);  }
 			@Override public boolean isInRange(Object obj)  { return Bijection.this.isInDomain(obj); }
 		};
