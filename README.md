@@ -4,6 +4,6 @@ This small Java library provides a minimal set of unifying abstractions for pack
 <dependency>
   <groupId>com.tomgibara.fundament</groupId>
   <artifactId>fundament</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
