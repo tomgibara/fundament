@@ -5,7 +5,7 @@ package com.tomgibara.fundament;
  *
  * @author Tom Gibara
  *
- * @param <T>
+ * @param <T> the type of value consumed
  */
 
 @FunctionalInterface

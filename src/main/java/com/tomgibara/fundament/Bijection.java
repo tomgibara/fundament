@@ -22,6 +22,8 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 	 * any value will return the same value. The domain is assumed not to
 	 * contain null.
 	 *
+	 * @param <T>
+	 *            the domain type
 	 * @param domainType
 	 *            the domain of the bijection
 	 * @return an identity bijection over the specified domain
@@ -44,6 +46,10 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 	/**
 	 * Generates a bijection from a pair of functions.
 	 *
+	 * @param <T>
+	 *            the domain type
+	 * @param <R>
+	 *            the range type
 	 * @param domainType
 	 *            the type returned by {@link #disapply(Object)}
 	 * @param rangeType
@@ -71,9 +77,11 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 	/**
 	 * Generates a bijection from a pair of unary operators.
 	 *
+	 * @param <T>
+	 *            the domain type
 	 * @param domainType
 	 *            the domain of the operators
-	 * @param op
+	 * @param fn
 	 *            provides the implementation of {@link #apply(Object)}
 	 * @param inv
 	 *            provides the implementation of {@link #disapply(Object)}
@@ -95,6 +103,10 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 	/**
 	 * Generates a bijection from a mapping using the supplied inverse function
 	 *
+	 * @param <T>
+	 *            the domain type
+	 * @param <R>
+	 *            the range type
 	 * @param mapping
 	 *            a mapping
 	 * @param inv
@@ -138,6 +150,8 @@ public interface Bijection<T, R> extends Mapping<T, R> {
 	/**
 	 * Composes two bijections into a single bijection.
 	 *
+	 * @param <S>
+	 *            the domain type
 	 * @param before
 	 *            the mapping to be applied first
 	 * @return the composite mapping

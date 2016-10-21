@@ -21,6 +21,8 @@ public interface Mapping<T, R> extends Function<T, R> {
 	/**
 	 * Defines a mapping from a domain to itself with a unary operator.
 	 *
+	 * @param <T>
+	 *            the domain type
 	 * @param domainType
 	 *            the domain of the operator
 	 * @param op
@@ -42,6 +44,10 @@ public interface Mapping<T, R> extends Function<T, R> {
 	 * Creates a mapping from a function. The returned mapping will use the
 	 * default implementation of {@link #isInDomain(Object)}.
 	 *
+	 * @param <T>
+	 *            the domain type
+	 * @param <R>
+	 *            the range type
 	 * @param domainType
 	 *            the type of the function variable
 	 * @param rangeType
@@ -95,6 +101,8 @@ public interface Mapping<T, R> extends Function<T, R> {
 	 * Composes two mappings into a single mapping, first applying the 'before'
 	 * mapping, and then this mapping.
 	 *
+	 * @param <S>
+	 *            the domain type
 	 * @param before
 	 *            the mapping to be applied first
 	 * @return the composite mapping
