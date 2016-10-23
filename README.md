@@ -10,39 +10,54 @@ This small Java library provides a minimal set of unifying abstractions for pack
 
 ##Dependency Chart
 
-| **Fundament** |   **Choose**  |               |
+|               |               |               |
 |:--------------|:--------------|:--------------|
-|  **Streams**  |
+|[Fundament] [0]|[Choose]    [1]|               |
+|[Streams]   [2]|
 |   Fundament   |
-|  **Hashing**  |
+|[Hashing]   [3]|
 |    Streams    |
 |     Choose    |
-|   **Bits**    |
+|[Bits]      [4]|
 |   Fundament   |
 |    Hashing    |
-|   **Coding**  |  **Storage**  |   **Tries**   |
+|[Coding]    [5]|[Storage]   [6]|[Tries]     [7]|
 |     Bits      |   Fundament   |   Fundament   |
 |               |     Bits      |    Streams    |
 |               |               |     Bits      |
-|  **Permute**  |  **Collect**  |
+|[Permute]   [8]|[Collect]   [9]|
 |     Bits      |   Fundament   |
 |    Storage    |    Hashing    |
 |               |    Storage    |
-|  **Algebra**  |
+|[Algebra]  [10]|
 |   Fundament   |
 |     Choose    |
 |    Hashing    |
 |    Permute    |
 |    Collect    |
-|   **Bloom**   |
+|[Bloom]    [11]|
 |   Fundament   |
 |    Hashing    |
 |     Bits      |
 |    Storage    |
 |    Algebra    |
-|  **Perfect**  |
+|[Perfect]  [12]|
 |    Hashing    |
 |    Storage    |
 |    Permute    |
 |    Collect    |
 |     Bloom     |
+
+ [0]: https://github.com/tomgibara/fundament
+ [1]: https://github.com/tomgibara/choose
+ [2]: https://github.com/tomgibara/streams
+ [3]: https://github.com/tomgibara/hashing
+ [4]: https://github.com/tomgibara/bits
+ [5]: https://github.com/tomgibara/coding
+ [6]: https://github.com/tomgibara/storage
+ [7]: https://github.com/tomgibara/tries
+ [8]: https://github.com/tomgibara/permute
+ [9]: https://github.com/tomgibara/collect
+[10]: https://github.com/tomgibara/algebra
+[11]: https://github.com/tomgibara/bloom
+[12]: https://github.com/tomgibara/perfect
