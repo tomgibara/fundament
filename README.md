@@ -10,13 +10,39 @@ This small Java library provides a minimal set of unifying abstractions for pack
 
 ##Dependency Chart
 
-| **Fundament** |               |               |
-|:-------------:|:-------------:|:-------------:|
+| **Fundament** |   **Choose**  |               |
+|:--------------|:--------------|:--------------|
 |  **Streams**  |
+|   Fundament   |
 |  **Hashing**  |
+|    Streams    |
+|     Choose    |
 |   **Bits**    |
+|   Fundament   |
+|    Hashing    |
 |   **Coding**  |  **Storage**  |   **Tries**   |
+|     Bits      |   Fundament   |   Fundament   |
+|               |     Bits      |    Streams    |
+|               |               |     Bits      |
 |  **Permute**  |  **Collect**  |
+|     Bits      |   Fundament   |
+|    Storage    |    Hashing    |
+|               |    Storage    |
 |  **Algebra**  |
+|   Fundament   |
+|     Choose    |
+|    Hashing    |
+|    Permute    |
+|    Collect    |
 |   **Bloom**   |
+|   Fundament   |
+|    Hashing    |
+|     Bits      |
+|    Storage    |
+|    Algebra    |
 |  **Perfect**  |
+|    Hashing    |
+|    Storage    |
+|    Permute    |
+|    Collect    |
+|     Bloom     |
