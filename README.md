@@ -7,3 +7,16 @@ This small Java library provides a minimal set of unifying abstractions for pack
   <version>1.1.0</version>
 </dependency>
 ```
+
+##Dependency Chart
+
+| **Fundament** |               |               |
+|:-------------:|:-------------:|:-------------:|
+|  **Streams**  |
+|  **Hashing**  |
+|   **Bits**    |
+|   **Coding**  |  **Storage**  |   **Tries**   |
+|  **Permute**  |  **Collect**  |
+|  **Algebra**  |
+|   **Bloom**   |
+|  **Perfect**  |
