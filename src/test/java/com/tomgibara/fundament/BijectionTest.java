@@ -34,7 +34,7 @@ public class BijectionTest {
 		@Override public boolean isInDomain(Object obj) {
 			if (!(obj instanceof String)) return false;
 			String str = (String) obj;
-			return str.matches("0|(:?[1-9][0-9]*)");
+                       return str.matches("0|(?:[1-9][0-9]*)");
 		}
 		@Override
 		public boolean isInRange(Object obj) {
